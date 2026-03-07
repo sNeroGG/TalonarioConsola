@@ -22,8 +22,9 @@ public class TalonarioServiceImpl implements ITalonarioService{
 	}
 	@Override
 	public Talonario recuperar(Talonario talonario) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		
+		return talonarios.get(0);
 	}
 	@Override
 	public void eliminar(Talonario talonario) {
@@ -38,6 +39,6 @@ public class TalonarioServiceImpl implements ITalonarioService{
 	@Override
 	public List<Talonario> recuperarTalonarios() {
 		// TODO Auto-generated method stub
-		return null;
+		return talonarios;
 	}
 }
