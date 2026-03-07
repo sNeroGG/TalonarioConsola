@@ -5,7 +5,4 @@ public class Talonario {
 	String Carnet;
 	String Descripcion;
 	String fecha;
-	String prueba01;
-
-	String prueba02;
 }
