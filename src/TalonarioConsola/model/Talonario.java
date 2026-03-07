@@ -6,4 +6,6 @@ public class Talonario {
 	String Descripcion;
 	String fecha;
 	String prueba01;
+
+	String prueba02;
 }
