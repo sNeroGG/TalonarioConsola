@@ -6,6 +6,8 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+
+//Cambios de conexion para el Laboratorio Parte2
 public class ConexionMySql {
     private final String user = "vroot";
     private final String password = "0000";
@@ -21,7 +23,9 @@ public class ConexionMySql {
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println(e);
         }
+
         return con;
+        
     }
 
     public void close() {
