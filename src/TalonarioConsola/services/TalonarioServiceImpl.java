@@ -62,10 +62,41 @@ public class TalonarioServiceImpl implements ITalonarioService{
 		return talonarios;
 	}
 
+			//Parte 2 del parcial 2 - Metodo de Modificar
 	@Override
-	public Talonario modificar(Talonario talonario) {
+	public boolean modificar(Talonario talonario) {
 		// TODO Auto-generated method stub
-		return null;
+	      boolean hecho = false;
+
+	        ConexionMySql conexion = new ConexionMySql();
+	        Connection con = null;
+	        PreparedStatement ps;
+
+	        String sql = "UPDATE talonario SET descripcion =?, fecha=?, estado=? WHERE carnet = ?";
+
+	        try {
+	            con = conexion.getConexion();
+	            ps = con.prepareStatement(sql);
+
+	            ps.setString(1, talonario.getDescripcion());
+	            ps.setString(2, talonario.getFecha());
+	            ps.setString(3, talonario.getEstado());
+				ps.setString(4, talonario.getCarnet());
+
+	            hecho = ps.execute();
+	            
+
+	        } catch (SQLException e) {
+	            System.out.println(e);
+	        } finally {
+	            try {
+	                con.close();
+	            } catch (SQLException e) {
+	                e.printStackTrace();
+	            }
+	        }
+
+	        return hecho;
 	}
 
 	@Override
