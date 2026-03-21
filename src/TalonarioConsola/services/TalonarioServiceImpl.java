@@ -21,7 +21,7 @@ public class TalonarioServiceImpl implements ITalonarioService{
 	        Connection con = null;
 	        PreparedStatement ps;
 
-	        String sql = "INSERT INTO estudiante(carnet, nombres, apellidos) VALUES (?,?,?)";
+	        String sql = "INSERT INTO talonario(carnet, descripcion, fecha, estado) VALUES (?,?,?,?)";
 
 	        try {
 	            con = conexion.getConexion();
@@ -47,8 +47,6 @@ public class TalonarioServiceImpl implements ITalonarioService{
 
 	        return hecho;
 	    }
-		
-	
 
 	@Override
 	public Talonario recuperar(Talonario talonario) {
@@ -60,7 +58,7 @@ public class TalonarioServiceImpl implements ITalonarioService{
 	@Override
 	public List<Talonario> recuperarTalonarios() {
 		// TODO Auto-generated method stub
-		List<Talonario>
+		List<Talonario> talonarios = null;
 		return talonarios;
 	}
 

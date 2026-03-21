@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 public class ConexionMySql {
     private final String user = "vroot";
     private final String password = "0000";
-    private final String url = "jdbc:mysql://127.0.0.1:3306/talonario";
+    private final String url = "jdbc:mysql://127.0.0.1:3306/talonarioconsola";
     private final String driver = "com.mysql.cj.jdbc.Driver";
     private Connection con = null;
 
